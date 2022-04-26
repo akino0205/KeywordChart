@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using RelatedKeyword.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
+
+//데이터베이스 공급자 : https://docs.microsoft.com/ko-kr/ef/core/providers/?tabs=dotnet-core-cli
+//UseMySQL by nuget "MySql.EntityFrameworkCore"
+builder.Services.AddDbContext<UserContext>(options =>
+       options.UseMySQL(builder.Configuration.GetConnectionString("UserContext")));
 
 var app = builder.Build();
 
@@ -20,6 +28,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
