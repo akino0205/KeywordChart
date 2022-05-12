@@ -5,19 +5,18 @@ namespace RelatedKeyword.Models
 {
     public class UserContext :DbContext
     {
-        public string ConnectionString { get; set; }
 
-        public UserContext(string connectionString)
+        public UserContext(DbContextOptions<UserContext> options)
+        : base(options)
         {
-            this.ConnectionString = connectionString;
         }
         /// <summary>
         /// by nuget "MySql.Data"
         /// </summary>
         /// <returns></returns>
-        private MySqlConnection GetConnection()
-        {
-            return new MySqlConnection(ConnectionString);
-        }
+        //private MySqlConnection GetConnection()
+        //{
+        //    return new MySqlConnection(ConnectionString);
+        //}
     }
 }
