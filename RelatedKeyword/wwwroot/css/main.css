@@ -290,6 +290,7 @@ button:-moz-focusring,
  */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
+
 }
 
 /**
@@ -429,15 +430,17 @@ html {
 }
 
 fieldset {
-  margin: 0;
-  padding: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  border: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-after: 0;
+    border: 0;
+    max-width: 790px;
+    margin: 0 auto;
 }
 
 legend {
@@ -819,7 +822,7 @@ legend {
     -ms-flex-align: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(to bottom, #000000, #21181b, #3c2932, #573b4b, #734f68, #86617d, #997492, #ad87a8, #bd9db9, #ceb3ca, #decadb, #efe1ed);
+    background-image: url("../image/abstract_background.png") ;
     background-size: cover;
     background-position: center center;
     padding: 15px;
@@ -827,7 +830,6 @@ legend {
 
 .s006 form {
   width: 100%;
-  max-width: 790px;
 }
 
 .s006 form legend {
@@ -949,4 +951,43 @@ legend {
     height: 26px;
   }
 }
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    opacity:0.8;
+    width:80%
+}
+
+thead {
+    background-color: #fff;
+    box-shadow: inset 0px -1px 0px #eee, 0px 5px 5px -5px rgba(0,0,0,.1);
+    position: relative;
+}
+
+    thead tr {
+        display: block;
+        position: relative;
+    }
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: calc(100vh - 350px);
+}
+
+    tbody tr:nth-child(2n) {
+        background-color: #fff;        
+    }
+    tbody tr:nth-child(2n+1) {
+        background-color: #efefef;
+    }
 

@@ -1,5 +1,5 @@
-using RelatedKeyword.Models;
 using Microsoft.EntityFrameworkCore;
+using RelatedKeyword.Models;
 using RelatedKeyword.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.Configure<NaverSearchAPISettings>(builder.Configuration.GetSection(NaverSearchAPISettings.Key));
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<NaverSearchService>();
+builder.Services.AddScoped<SearchService>();
 //데이터베이스 공급자 : https://docs.microsoft.com/ko-kr/ef/core/providers/?tabs=dotnet-core-cli
 //UseMySQL by nuget "MySql.EntityFrameworkCore"
 builder.Services.AddDbContext<UserContext>(options =>
