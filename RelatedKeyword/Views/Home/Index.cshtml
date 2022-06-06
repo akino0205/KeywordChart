@@ -1,5 +1,5 @@
 ﻿@model RelatedKeyword.Models.NaverSearchModel;
-<div class="s006">
+<div class="@(Model.KeywordList is not null ? "s006 s006-result" : "s006")">
     <form asp-controller="Home" asp-action="Result">
         <fieldset>
             <legend>What are you looking for?</legend>
@@ -23,27 +23,52 @@
                     </div> 
             }
         </fieldset>
-        @if(Model.KeywordList is not null)
-            {
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>연관키워드</th>
-                        <th>월간검색수 - PC</th>
-                        <th>월간검색수 - 모바일</th>
-                        <th>총 월간검색수</th>
-                    </tr>
-                    @foreach(var result in Model.KeywordList.Select((item, index) => new { Item = item , Idx = index}))
-                    {
-                        <tr>
-                            <td>@(result.Idx+1)</td>
-                            <td>@result.Item.RelKeyword</td>
-                            <td>@result.Item.monthlyPcQcCntInt</td>
-                            <td>@result.Item.monthlyMobileQcCntInt</td>
-                            <td>@result.Item.monthlyQcCnt</td>
-                        </tr>
-                    }
-                </table>   
-            }
     </form>
-</div><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</div>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+@if(Model.KeywordList is not null)
+    {
+        <div class="result-area">
+            <div class="chart-area">
+                <div id="pie_container"></div>
+                <div id="column_container"></div>
+                @*<div id="line_container"></div>*@
+                <script type="text/javascript">
+                    SetPieChart(
+                        '@Model.PieChartModel.Title', 
+                        @Html.Raw(Model.PieChartModel.SeriesJsonData)
+                    );
+                    SetStackedColumnChart(
+                        '@Model.ColumnChartModel.Title', 
+                        @Html.Raw(Model.ColumnChartModel.xAxisCategoriesJsonData), 
+                        @Html.Raw(Model.ColumnChartModel.SeriesJsonData)
+                    );
+                </script>
+            </div>
+            <div class="table-area container">
+                <table class="type10 container">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>연관키워드</th>
+                            <th>월간검색수 - PC</th>
+                            <th>월간검색수 - 모바일</th>
+                            <th>총 월간검색수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var result in Model.KeywordList.Select((item, index) => new { Item = item , Idx = index}))
+                        {
+                            <tr>
+                                <td>@(result.Idx+1)</td>
+                                <td>@result.Item.RelKeyword</td>
+                                <td>@result.Item.monthlyPcQcCntInt</td>
+                                <td>@result.Item.monthlyMobileQcCntInt</td>
+                                <td>@result.Item.monthlyQcCnt</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>  
+            </div>
+        </div>
+    }

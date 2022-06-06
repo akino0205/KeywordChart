@@ -6,7 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>@ViewData["Title"] - RelatedKeyword</title>
     <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/table.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/chart.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="~/js/ResultChart.js"></script>
 </head>
 <body>
     @RenderBody()

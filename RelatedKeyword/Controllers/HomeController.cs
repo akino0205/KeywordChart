@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
-    {
+    {        
         private readonly ILogger<HomeController> _logger;
         private readonly SearchService _naverSearchService;
 
@@ -26,7 +26,7 @@ namespace WebApplication1.Controllers
         {
             NaverSearchModel model = new();
             if (!String.IsNullOrEmpty(searchKeyword))
-                model = (_naverSearchService.SearchRelatedKeywordInfo(searchKeyword)).Result;
+                model = (_naverSearchService.SearchKeyword(searchKeyword)).Result;
 
             return View("Index", model);
         }

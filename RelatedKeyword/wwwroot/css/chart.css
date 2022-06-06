@@ -1,0 +1,14 @@
+﻿.chart-area {
+    margin: 30px;
+    display: flex;
+}
+/*#pie_container, #bar_container, #line_container {
+    width: 30%; 
+    margin: 20px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}*/
+#pie_container, #column_container {
+    width: 50%;
+    margin: 20px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}

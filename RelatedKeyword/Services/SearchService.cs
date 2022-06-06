@@ -1,7 +1,11 @@
 ﻿using Microsoft.Extensions.Options;
 using RelatedKeyword.Models;
+using RelatedKeyword.Models.Chart;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Unicode;
 
 namespace RelatedKeyword.Services
 {
@@ -11,11 +15,19 @@ namespace RelatedKeyword.Services
         private readonly HttpClient _client;
         private readonly UserContext _userContext;
         private readonly string _mbKey = "temp";
-        public SearchService(IOptions<NaverSearchAPISettings> naverSettings, HttpClient client, UserContext userContext)
+        private readonly int _topCount = 10;
+    public SearchService(IOptions<NaverSearchAPISettings> naverSettings, HttpClient client, UserContext userContext)
         {
             _naverSettings = naverSettings.Value;
             _client = client;
-            _userContext = userContext;
+            _userContext = userContext;           
+        }
+        public async Task<NaverSearchModel> SearchKeyword(string keyword)
+        {
+            NaverSearchModel result = await SearchRelatedKeywordInfo(keyword);
+            FillPieChartModel(ref result);
+            FillColumnChartModel(ref result);
+            return result;
         }
         #region Search
         public async Task<NaverSearchModel> SearchRelatedKeywordInfo(string keyword)
@@ -61,7 +73,7 @@ namespace RelatedKeyword.Services
             return String.Join("&", paramDic.Select(kvp => kvp.Key + "=" + kvp.Value));
         }
         #endregion Search
-        #region search history
+        #region Search history
         //TODO : 사용자에 따라 가져오기
         public List<string> GetSearchHistory()
         => _userContext.Searchhistories.Any(a => a.UserKey.Equals(_mbKey))
@@ -100,6 +112,61 @@ namespace RelatedKeyword.Services
                 Console.WriteLine(ex);
             }
         }
-        #endregion search history
+        #endregion Search history
+        #region Search Chart
+        private void FillPieChartModel(ref NaverSearchModel model)
+        {
+            PieChartModel pie = new();
+            //차트 제목
+            pie.Title = $"Top{_topCount} 연관검색어 비중";
+            var topItems = model.KeywordList.OrderByDescending(o => o.monthlyQcCnt).Take(10);
+            decimal topTotalCount = topItems.Sum(s => s.monthlyQcCnt);
+            var dataModel = new List<PieChartSeriesDataModel>();
+            foreach (var item in topItems)
+            {
+                dataModel.Add(new() { 
+                    Name = $"{item.RelKeyword} : {item.monthlyQcCnt}건",
+                    Y = item.monthlyQcCnt/ topTotalCount * 100m
+                });
+            }
+            pie.SeriesData = dataModel;
+            pie.SeriesJsonData = GetJsonData(dataModel);
+            model.PieChartModel = pie;
+        }
+        private void FillColumnChartModel(ref NaverSearchModel model)
+        {
+            StackedColumnDataModel col = new();
+            //차트 제목
+            col.Title = $"Top{_topCount} PC/모바일 연관검색어 건수";
+
+            var topItems = model.KeywordList.OrderByDescending(o => o.monthlyQcCnt).Take(10);
+
+            //x축 종류
+            col.xAxisCategories = topItems.Select(s => s.RelKeyword).ToList();
+            col.xAxisCategoriesJsonData = GetJsonData(col.xAxisCategories);
+
+            var dataModel = new List<StackedColumnSeriesModel>();
+            dataModel.Add(new()
+            {
+                Name = "모바일",
+                Data = topItems.Select(s => s.monthlyMobileQcCntInt).ToList()
+            });
+            dataModel.Add(new()
+            {
+                Name = "PC",
+                Data = topItems.Select( s => s.monthlyPcQcCntInt).ToList()
+            });
+            
+            col.SeriesData = dataModel;
+            col.SeriesJsonData = GetJsonData(dataModel);
+            model.ColumnChartModel = col;
+        }
+        private string GetJsonData(object data)
+         => JsonSerializer.Serialize(data, new JsonSerializerOptions
+         {
+             Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
+         });
+
+        #endregion Search Chart
     }
 }

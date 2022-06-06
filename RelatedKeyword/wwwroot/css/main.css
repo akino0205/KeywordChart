@@ -951,43 +951,12 @@ legend {
     height: 26px;
   }
 }
-
-table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    margin: 0 auto;
-    border: 1px solid #eee;
-    opacity:0.8;
-    width:80%
+.s006-result 
+{
+    min-height: 400px;
 }
-
-thead {
-    background-color: #fff;
-    box-shadow: inset 0px -1px 0px #eee, 0px 5px 5px -5px rgba(0,0,0,.1);
-    position: relative;
+.result-area
+{
+    margin-top: 30px;
+    background: #fff;
 }
-
-    thead tr {
-        display: block;
-        position: relative;
-    }
-
-th, td {
-    padding: 5px;
-    text-align: left;
-}
-
-tbody {
-    display: block;
-    overflow: auto;
-    width: 100%;
-    height: calc(100vh - 350px);
-}
-
-    tbody tr:nth-child(2n) {
-        background-color: #fff;        
-    }
-    tbody tr:nth-child(2n+1) {
-        background-color: #efefef;
-    }
-
