@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NdIN3uR/P31FWEAg8iKUWMtMutcPCSDfZVUf7Djbexg=",
+  "Hash": "zd0xz20sXbMJdwEBo5osu8Ek/8S7USp/lTaTEhuXNvI=",
   "Source": "RelatedKeyword",
   "BasePath": "_content/RelatedKeyword",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\RelatedKeyword.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\css\\chart.css",
+      "SourceId": "RelatedKeyword",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\",
+      "BasePath": "_content/RelatedKeyword",
+      "RelativePath": "css/chart.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\chart.css"
+    },
+    {
       "Identity": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\css\\main.css",
       "SourceId": "RelatedKeyword",
       "SourceType": "Discovered",
@@ -66,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
+    },
+    {
+      "Identity": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\css\\table.css",
+      "SourceId": "RelatedKeyword",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\",
+      "BasePath": "_content/RelatedKeyword",
+      "RelativePath": "css/table.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\table.css"
     },
     {
       "Identity": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\favicon.ico",
@@ -85,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\js\\index.js",
+      "Identity": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\image\\abstract_background.png",
       "SourceId": "RelatedKeyword",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\",
       "BasePath": "_content/RelatedKeyword",
-      "RelativePath": "js/index.js",
+      "RelativePath": "image/abstract_background.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +133,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\index.js"
+      "OriginalItemSpec": "wwwroot\\image\\abstract_background.png"
+    },
+    {
+      "Identity": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\js\\ResultChart.js",
+      "SourceId": "RelatedKeyword",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\",
+      "BasePath": "_content/RelatedKeyword",
+      "RelativePath": "js/ResultChart.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ResultChart.js"
     },
     {
       "Identity": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\wwwroot\\lib\\jquery\\dist\\jquery.js",
