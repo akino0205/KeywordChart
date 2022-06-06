@@ -2,5 +2,7 @@
 # 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
 ################################################################################
 
-KeywordChart/RelatedKeyword/bin/Debug/net6.0/
-KeywordChart/RelatedKeyword/obj/Debug/net6.0/
+KeywordChart/RelatedKeyword/bin/
+KeywordChart/RelatedKeyword/obj/
+KeywordChart/RelatedKeyword/.vs/
+KeywordChart/RelatedKeyword/appsettings.Development.json
