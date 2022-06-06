@@ -21,21 +21,21 @@
 
 ## 기능명세
 1. 기본 환경 셋팅
-  * .NET Core 셋팅
-  * VS 2022 셋팅
-  * MySql 셋팅
-  * git 및 github 연결
+    * .NET Core 셋팅
+    * VS 2022 셋팅
+    * MySql 셋팅
+    * git 및 github 연결
 2. 화면 설계
-  * 검색+차트, 검색어 이력 등 약 2장
-  * PPT 파일로 작성
+    * 검색+차트, 검색어 이력 등 약 2장
+    * PPT 파일로 작성
 3. 기능 구현
-  1) 연관검색어 검색 
-    * API 신청
-    * Json 파싱
-    * 검색 결과 리스트
-  2) 검색어 이력
-    * 검색어 이력 저장
-  3) 검색 결과 차트
-    * 연관검색어 비중(pie)
-    * PC/모바일 연관검색어 건수(stacked column)
+    1) 연관검색어 검색 
+        * API 신청
+        * Json 파싱
+        * 검색 결과 리스트
+    2) 검색어 이력
+        * 검색어 이력 저장
+    3) 검색 결과 차트
+        * 연관검색어 비중(pie)
+        * PC/모바일 연관검색어 건수(stacked column)
 <img width="516" alt="차트" src="https://user-images.githubusercontent.com/58022014/172150909-952f67f3-69b4-4a5b-b393-e3817f045f24.png">
