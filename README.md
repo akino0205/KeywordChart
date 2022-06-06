@@ -15,7 +15,7 @@
 #### UI 
   * ASP.NET Core MVC
 #### 라이브러리
-  [![highcharts](https://user-images.githubusercontent.com/58022014/172142754-a335b3e3-f87f-459c-93ba-4c1c3f47b1da.svg =150*30)](https://www.highcharts.com/)
+  [![highcharts](https://user-images.githubusercontent.com/58022014/172142754-a335b3e3-f87f-459c-93ba-4c1c3f47b1da.svg = 150x30)](https://www.highcharts.com/)
 #### 외부API
   [![Naver광고API-03C75A](https://user-images.githubusercontent.com/58022014/172149017-1007bf49-7d58-4cc5-9788-0e785f94aed5.svg)](https://manage.searchad.naver.com/)
 
