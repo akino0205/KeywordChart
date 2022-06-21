@@ -1,0 +1,167 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeywordTests1\\RelatedKeyword.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeywordTests1\\RelatedKeyword.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeywordTests1\\RelatedKeyword.Tests.csproj",
+        "projectName": "RelatedKeyword.Tests",
+        "projectPath": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeywordTests1\\RelatedKeyword.Tests.csproj",
+        "packagesPath": "C:\\Users\\akino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeywordTests1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\akino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\RelatedKeyword.csproj": {
+                "projectPath": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\RelatedKeyword.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.2.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\RelatedKeyword.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\RelatedKeyword.csproj",
+        "projectName": "RelatedKeyword",
+        "projectPath": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\RelatedKeyword.csproj",
+        "packagesPath": "C:\\Users\\akino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\akino\\source\\repos\\akino0205\\KeywordChart\\RelatedKeyword\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\akino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.29, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
