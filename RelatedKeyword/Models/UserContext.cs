@@ -19,6 +19,7 @@ namespace RelatedKeyword.Models
 
         public virtual DbSet<Searchhistory> Searchhistories { get; set; }
         public virtual DbSet<Searchresult> Searchresults { get; set; }
+        public virtual DbSet<Userinfo> Userinfos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -49,10 +50,7 @@ namespace RelatedKeyword.Models
 
                 entity.Property(e => e.Result).HasColumnName("result");
 
-                entity.Property(e => e.UserKey)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .HasColumnName("user_key");
+                entity.Property(e => e.UserKey).HasColumnName("user_key");
             });
 
             modelBuilder.Entity<Searchresult>(entity =>
@@ -87,6 +85,36 @@ namespace RelatedKeyword.Models
                     .HasForeignKey(d => d.HistoryIndex)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("searchresult_ibfk_1");
+            });
+
+            modelBuilder.Entity<Userinfo>(entity =>
+            {
+                entity.HasKey(e => e.UserKey)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("userinfo");
+
+                entity.Property(e => e.UserKey).HasColumnName("user_key");
+
+                entity.Property(e => e.CreateDate).HasColumnName("create_date");
+
+                entity.Property(e => e.EditDate).HasColumnName("edit_date");
+
+                entity.Property(e => e.Ip)
+                    .HasMaxLength(50)
+                    .HasColumnName("ip");
+
+                entity.Property(e => e.UserId)
+                    .HasMaxLength(50)
+                    .HasColumnName("user_id");
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(50)
+                    .HasColumnName("user_name");
+
+                entity.Property(e => e.UserPassword)
+                    .HasMaxLength(50)
+                    .HasColumnName("user_password");
             });
 
             OnModelCreatingPartial(modelBuilder);

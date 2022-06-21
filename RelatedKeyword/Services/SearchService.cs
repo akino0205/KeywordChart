@@ -14,13 +14,16 @@ namespace RelatedKeyword.Services
         private readonly NaverSearchAPISettings _naverSettings;
         private readonly HttpClient _client;
         private readonly UserContext _userContext;
-        private readonly string _mbKey = "temp";
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly int _topCount = 10;
-    public SearchService(IOptions<NaverSearchAPISettings> naverSettings, HttpClient client, UserContext userContext)
+
+        public SearchService(IOptions<NaverSearchAPISettings> naverSettings, HttpClient client, 
+            UserContext userContext, IHttpContextAccessor httpContextAccessor)
         {
             _naverSettings = naverSettings.Value;
             _client = client;
-            _userContext = userContext;           
+            _userContext = userContext;
+            _httpContextAccessor = httpContextAccessor;
         }
         public async Task<NaverSearchModel> SearchKeyword(string keyword)
         {
@@ -76,9 +79,31 @@ namespace RelatedKeyword.Services
         #region Search history
         //TODO : 사용자에 따라 가져오기
         public List<string> GetSearchHistory()
-        => _userContext.Searchhistories.Any(a => a.UserKey.Equals(_mbKey))
-            ? _userContext.Searchhistories.Where(w => w.UserKey.Equals(_mbKey)).OrderByDescending(o => o.Date).Take(10).Select(s => s.Keyword).ToList()
+        => HasUserKey()
+            ? _userContext.Searchhistories.Where(w => w.UserKey.Equals(GetUserKeyFromIp()))
+            .OrderByDescending(o => o.Date).Take(10).Select(s => s.Keyword).ToList()
             : null;
+        public bool HasUserKey()
+         => _userContext.Searchhistories.Any(a => a.UserKey.Equals(GetUserKeyFromIp()));
+        public int GetUserKeyFromIp()
+        {
+            var clientIP = GetIP();
+            return _userContext.Userinfos.Any(a => a.Ip.Equals(clientIP))
+               ? _userContext.Userinfos.Where(w => w.Ip.Equals(clientIP)).FirstOrDefault()?.UserKey ?? 0
+               : CreateUserKeyWithIP(clientIP);
+        }
+        private string GetIP()
+         => _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress.ToString();
+        private int CreateUserKeyWithIP(string clientIP)
+        {
+            _userContext.Userinfos.Add(new Userinfo()
+            {
+                Ip = clientIP,
+                CreateDate = DateTime.Now
+            });
+            _userContext.SaveChanges();
+            return _userContext.Userinfos.Where(w => w.Ip.Equals(clientIP)).FirstOrDefault()?.UserKey ?? 0;
+        }
         private void SaveSearchHistory(string keyword, NaverSearchModel data)
         {
             if (data is null) return;
@@ -100,7 +125,7 @@ namespace RelatedKeyword.Services
                 }
                 _userContext.Searchhistories.Add(new Searchhistory()
                 {
-                    UserKey = _mbKey, //TODO : 사용자키 넣기
+                    UserKey = GetUserKeyFromIp(), //TODO : 사용자키 넣기
                     Keyword = keyword,
                     Result = data.ToString(),
                     Date = DateTime.Now,
@@ -119,7 +144,7 @@ namespace RelatedKeyword.Services
             PieChartModel pie = new();
             //차트 제목
             pie.Title = $"Top{_topCount} 연관검색어 비중";
-            var topItems = model.KeywordList.OrderByDescending(o => o.monthlyQcCnt).Take(10);
+            var topItems = model.KeywordList?.OrderByDescending(o => o.monthlyQcCnt).Take(GetTakeCount(model));
             decimal topTotalCount = topItems.Sum(s => s.monthlyQcCnt);
             var dataModel = new List<PieChartSeriesDataModel>();
             foreach (var item in topItems)
@@ -138,8 +163,7 @@ namespace RelatedKeyword.Services
             StackedColumnDataModel col = new();
             //차트 제목
             col.Title = $"Top{_topCount} PC/모바일 연관검색어 건수";
-
-            var topItems = model.KeywordList.OrderByDescending(o => o.monthlyQcCnt).Take(10);
+            var topItems = model.KeywordList?.OrderByDescending(o => o.monthlyQcCnt).Take(GetTakeCount(model));
 
             //x축 종류
             col.xAxisCategories = topItems.Select(s => s.RelKeyword).ToList();
@@ -154,19 +178,20 @@ namespace RelatedKeyword.Services
             dataModel.Add(new()
             {
                 Name = "PC",
-                Data = topItems.Select( s => s.monthlyPcQcCntInt).ToList()
+                Data = topItems.Select(s => s.monthlyPcQcCntInt).ToList()
             });
-            
+
             col.SeriesData = dataModel;
             col.SeriesJsonData = GetJsonData(dataModel);
             model.ColumnChartModel = col;
         }
+        private int GetTakeCount(NaverSearchModel model)
+         => model.KeywordList.Count > _topCount ? _topCount : model.KeywordList.Count;
         private string GetJsonData(object data)
          => JsonSerializer.Serialize(data, new JsonSerializerOptions
          {
              Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
          });
-
         #endregion Search Chart
     }
 }

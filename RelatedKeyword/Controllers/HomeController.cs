@@ -7,12 +7,10 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {        
-        private readonly ILogger<HomeController> _logger;
         private readonly SearchService _naverSearchService;
 
-        public HomeController(ILogger<HomeController> logger, SearchService naverSearchService)
+        public HomeController(SearchService naverSearchService)
         {
-            _logger = logger;
             _naverSearchService = naverSearchService;
         }
 
@@ -29,11 +27,6 @@ namespace WebApplication1.Controllers
                 model = (_naverSearchService.SearchKeyword(searchKeyword)).Result;
 
             return View("Index", model);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }       
+        }     
     }
 }
