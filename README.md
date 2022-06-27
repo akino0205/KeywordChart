@@ -25,9 +25,11 @@
     * VS 2022 셋팅
     * MySql 셋팅
     * git 및 github 연결
+    
 2. 화면 설계
     * 검색+차트, 검색어 이력 등 약 2장
     * PPT 파일로 작성
+    
 3. 기능 구현
     1) 연관검색어 검색 
         * API 신청
@@ -40,6 +42,7 @@
         * PC/모바일 연관검색어 건수(stacked column)
     4) 검색 결과 리스트
 <img width="465" alt="화면스샷png" src="https://user-images.githubusercontent.com/58022014/175939504-97bd5650-edb4-4d33-9de1-f4760ad293ba.png">
+
 4. 단위 테스트 - C# MSTest
     1) View - Controller 단위 테스트
     2) Service 단위 테스트
