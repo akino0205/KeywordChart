@@ -38,4 +38,10 @@
     3) 검색 결과 차트
         * 연관검색어 비중(pie)
         * PC/모바일 연관검색어 건수(stacked column)
-<img width="516" alt="차트" src="https://user-images.githubusercontent.com/58022014/172150909-952f67f3-69b4-4a5b-b393-e3817f045f24.png">
+    4) 검색 결과 리스트
+<img width="465" alt="화면스샷png" src="https://user-images.githubusercontent.com/58022014/175939504-97bd5650-edb4-4d33-9de1-f4760ad293ba.png">
+4. 단위 테스트 - C# MSTest
+    1) View - Controller 단위 테스트
+    2) Service 단위 테스트
+<img width="514" alt="테스트실행스샷" src="https://user-images.githubusercontent.com/58022014/175947077-dce188a9-7f6f-491a-a2f5-51018287da3d.png">
+
