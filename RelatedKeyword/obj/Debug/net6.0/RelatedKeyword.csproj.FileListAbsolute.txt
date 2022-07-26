@@ -17,8 +17,6 @@ C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\MySql.Data.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\Ubiety.Dns.Core.dll
-C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\ZstdNet.dll
-C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
@@ -50,3 +48,8 @@ C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\obj\Debug\net6
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\obj\Debug\net6.0\ref\RelatedKeyword.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\Humanizer.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\RelatedKeywordLibrary.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\RelatedKeywordLibrary.pdb
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeyword\bin\Debug\net6.0\ZstdNet.dll

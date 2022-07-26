@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using RelatedKeyword.Models;
 using RelatedKeyword.Models.Chart;
+using RelatedKeywordLibrary.Models;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -79,12 +80,15 @@ namespace RelatedKeyword.Services
         #region Search history
         //TODO : 사용자에 따라 가져오기
         public List<string> GetSearchHistory()
-        => HasUserKey()
-            ? _userContext.Searchhistories.Where(w => w.UserKey.Equals(GetUserKeyFromIp()))
+        {
+            var userkeyFormIP = GetUserKeyFromIp();
+            return HasUserKey(userkeyFormIP)
+            ? _userContext.Searchhistories.Where(w => w.UserKey.Equals(userkeyFormIP))
             .OrderByDescending(o => o.Date).Take(10).Select(s => s.Keyword).ToList()
             : null;
-        public bool HasUserKey()
-         => _userContext.Searchhistories.Any(a => a.UserKey.Equals(GetUserKeyFromIp()));
+        }
+        public bool HasUserKey(int userkeyFormIP)
+         => _userContext.Searchhistories.Any(a => a.UserKey.Equals(userkeyFormIP));
         public int GetUserKeyFromIp()
         {
             var clientIP = GetIP();
@@ -123,6 +127,7 @@ namespace RelatedKeyword.Services
                         SumCnt = info.Item.monthlyQcCnt
                     });
                 }
+
                 _userContext.Searchhistories.Add(new Searchhistory()
                 {
                     UserKey = GetUserKeyFromIp(), //TODO : 사용자키 넣기
@@ -132,7 +137,8 @@ namespace RelatedKeyword.Services
                     Searchresults = results
                 });
                 _userContext.SaveChanges();
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 Console.WriteLine(ex);
             }

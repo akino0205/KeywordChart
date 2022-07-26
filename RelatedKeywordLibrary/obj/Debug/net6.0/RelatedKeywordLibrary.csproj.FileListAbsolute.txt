@@ -1,0 +1,12 @@
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\bin\Debug\net6.0\RelatedKeywordLibrary.deps.json
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\bin\Debug\net6.0\RelatedKeywordLibrary.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\bin\Debug\net6.0\RelatedKeywordLibrary.pdb
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\RelatedKeywordLibrary.csproj.AssemblyReference.cache
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\RelatedKeywordLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\RelatedKeywordLibrary.AssemblyInfoInputs.cache
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\RelatedKeywordLibrary.AssemblyInfo.cs
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\RelatedKeywordLibrary.csproj.CoreCompileInputs.cache
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\RelatedKeywordLibrary.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\refint\RelatedKeywordLibrary.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\RelatedKeywordLibrary.pdb
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordLibrary\obj\Debug\net6.0\ref\RelatedKeywordLibrary.dll

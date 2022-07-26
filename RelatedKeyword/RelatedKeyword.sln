@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RelatedKeyword", "RelatedKe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RelatedKeyword.Tests", "..\RelatedKeywordTests1\RelatedKeyword.Tests.csproj", "{3EBFD36A-A01E-484B-9C23-3E02EF069198}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelatedKeywordAPI", "..\RelatedKeywordAPI\RelatedKeywordAPI.csproj", "{B75DFFC0-7861-4898-B53C-1D42E221D437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelatedKeywordLibrary", "..\RelatedKeywordLibrary\RelatedKeywordLibrary.csproj", "{574A1658-BF2C-43F9-A889-351D5A799810}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3EBFD36A-A01E-484B-9C23-3E02EF069198}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EBFD36A-A01E-484B-9C23-3E02EF069198}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EBFD36A-A01E-484B-9C23-3E02EF069198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75DFFC0-7861-4898-B53C-1D42E221D437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75DFFC0-7861-4898-B53C-1D42E221D437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75DFFC0-7861-4898-B53C-1D42E221D437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75DFFC0-7861-4898-B53C-1D42E221D437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{574A1658-BF2C-43F9-A889-351D5A799810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{574A1658-BF2C-43F9-A889-351D5A799810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{574A1658-BF2C-43F9-A889-351D5A799810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{574A1658-BF2C-43F9-A889-351D5A799810}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

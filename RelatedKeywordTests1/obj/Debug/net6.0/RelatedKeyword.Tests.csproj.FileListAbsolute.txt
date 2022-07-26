@@ -46,8 +46,6 @@ C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debu
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\MySql.Data.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\Ubiety.Dns.Core.dll
-C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\ZstdNet.dll
-C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\NuGet.Frameworks.dll
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
@@ -135,3 +133,8 @@ C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\obj\Debu
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\obj\Debug\net6.0\RelatedKeyword.Tests.pdb
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\obj\Debug\net6.0\RelatedKeyword.Tests.genruntimeconfig.cache
 C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\obj\Debug\net6.0\ref\RelatedKeyword.Tests.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\RelatedKeywordLibrary.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\RelatedKeywordLibrary.pdb
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\akino\source\repos\akino0205\KeywordChart\RelatedKeywordTests1\bin\Debug\net6.0\ZstdNet.dll

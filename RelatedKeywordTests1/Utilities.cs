@@ -5,6 +5,7 @@ using Moq;
 using Moq.Protected;
 using RelatedKeyword.Models;
 using RelatedKeyword.Services;
+using RelatedKeywordLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
